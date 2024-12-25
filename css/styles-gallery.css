@@ -10,34 +10,49 @@ body {
     background: #ccebeb;
 } 
  
-header { 
-    text-align: center; 
-    padding: 2rem; 
-    background: rgb(22, 148, 206); 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-} 
- 
-nav ul { 
-    list-style: none; 
-    display: flex; 
-    gap: 1rem; 
+/* แก้ไขส่วน Navbar */
+header {
     text-align: center;
-} 
- 
-nav a { 
-    padding: 0.5rem 1rem; 
-    margin: 0 0.5rem; 
-    border: none; 
-    border-radius: 25px; 
-    background: #eee; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    text-align: center;
-} 
- 
-nav a.active { 
-    color: #5f21d3; 
-} 
+    padding: 2rem;
+    background: linear-gradient(to right, #2193b0, #6dd5ed); /* สีไล่เฉด */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* เพิ่มช่องว่างระหว่างลิงก์ */
+    margin-top: 1rem;
+}
+
+nav a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2); /* สีโปร่งแสง */
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: white;
+    color: #2193b0; /* สีเมื่อ hover */
+    border-color: #6dd5ed; /* เพิ่มเส้นขอบ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เอฟเฟกต์เงา */
+}
+
+nav a.active {
+    background: white;
+    color: #6dd5ed;
+    font-weight: bold; /* เน้นตัวอักษรลิงก์ที่ active */
+    border-color: #2193b0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ดูเด่น */
+}
+
 .gallery { 
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); 
@@ -87,3 +102,65 @@ nav a.active {
 .gallery-item:nth-child(2) { animation-delay: 0.2s; } 
 .gallery-item:nth-child(3) { animation-delay: 0.3s; } 
 /* และอื่นๆ */ 
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Gallery ปรับการจัดวาง */
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0.5rem; /* ลดระยะ Padding */
+    }
+
+    .gallery-item img {
+        height: auto; /* ปรับให้ภาพไม่สูงเกิน */
+    }
+
+    .overlay {
+        padding: 0.5rem; /* ลด Padding ของ Overlay */
+        font-size: 0.9rem; /* ลดขนาดตัวอักษร */
+        line-height: 1.4; /* ปรับช่องว่างระหว่างบรรทัด */
+    }
+
+    .overlay h3 {
+        font-size: 1.2rem; /* ขนาดหัวข้อเล็กลง */
+    }
+
+    /* Navbar ปรับตัวอักษร */
+    nav a {
+        font-size: 0.9rem; /* ขนาดตัวอักษรเล็กลง */
+        padding: 0.5rem 1rem; /* ลดระยะ Padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* แสดงเมนูเป็นแนวตั้ง */
+        gap: 0.8rem; /* ลดช่องว่างระหว่างลิงก์ */
+    }
+
+    /* Header */
+    header {
+        padding: 1.5rem; /* ลดระยะห่างรอบ Header */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* ลดขนาดตัวอักษรของหัวเรื่อง */
+    }
+
+    /* Main Content */
+    main h1 {
+        font-size: 1.2rem; /* ขนาดหัวข้อเล็กลง */
+        text-align: center;
+    }
+
+    main p {
+        font-size: 0.85rem; /* ลดขนาดตัวอักษรของเนื้อหา */
+    }
+}
