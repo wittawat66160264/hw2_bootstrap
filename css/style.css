@@ -59,14 +59,21 @@ li{
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(700px, 1fr)); 
     gap: 1rem; 
-    padding: 1rem; 
+    padding: 1rem;
 }
 .gallery-item img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
     display: block; 
+    object-fit: cover;
     }
+.carousel-inner img {
+    width: 1200px; /* หรือกำหนดค่า width: auto; */
+    height: 700px;
+    object-fit: cover; /* ปรับภาพให้พอดีกับพื้นที่โดยไม่ยืดหรือบิดเบือน */
+    }
+    
 p {
         font-size: 1.1rem; /* ขนาดฟอนต์ข้อความ */
         line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
@@ -80,4 +87,4 @@ p1 {
         letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
         color: #000; /* สีข้อความ */
         margin-bottom: 15px; /* ระยะห่างระหว่างย่อหน้า */
-    } 
+    }
