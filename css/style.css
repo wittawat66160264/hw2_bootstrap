@@ -78,7 +78,7 @@ p {
         font-size: 1.1rem; /* ขนาดฟอนต์ข้อความ */
         line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
         letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-        color: #000; /* สีข้อความ */
+        color: #ffffff; /* สีข้อความ */
         margin-bottom: 15px; /* ระยะห่างระหว่างย่อหน้า */
     } 
 p1 {
@@ -88,6 +88,24 @@ p1 {
         color: #000; /* สีข้อความ */
         margin-bottom: 15px; /* ระยะห่างระหว่างย่อหน้า */
     }
-.card-title{
-        color: #000; /* สีข้อความ */
+    @media (max-width: 768px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1rem;
         }
+    
+        .header h1 {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .gallery {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+        }
+    }
+    .card-img-top {
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensure the image fills the space without distortion */
+    }
