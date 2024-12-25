@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="th"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>ติดต่อเรา - เทคโนโลยีเว็บสมัยใหม่</title> 
+    <link rel="stylesheet" href="css/styles-contact.css">
+</head> 
+<body> 
+    <header role="banner"> 
+        <h1>ติดต่อเรา</h1> 
+        <nav role="navigation"> 
+            <ul> 
+                <li><a href="index.html">หน้าหลัก</a></li> 
+                <li><a href="detail.html">รายระเอียด</a></li> 
+                <li><a href="contact.html">ติดต่อเรา</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+ 
+    <main role="main"> 
+        <section> 
+            <div class="gallery">
+                <img src="https://th.bing.com/th/id/OIP.P-deEzbPolgDSOfxe24R5gHaHa?rs=1&pid=ImgDetMain
+        " alt="รูปสวยงาม">    
+                    <h1></h1>
+                    <p1></p1>
+            </div>
+            <h2>ส่งข้อความถึงเรา</h2> 
+            <!-- ฟอร์มจะถูกเพิ่มที่นี่ --> 
+            <form action="/submit" method="POST" role="form"> 
+                <div class="form-group"> 
+                    <label for="fullname">ชื่อ-นามสกุล *</label> 
+                    <input  
+                        type="text"  
+                        id="fullname"  
+                        name="fullname"  
+                        required  
+                        minlength="2" 
+                        maxlength="100"> 
+                </div> 
+         
+                <div class="form-group"> 
+                    <label for="email">อีเมล *</label> 
+                    <input  
+                        type="email"  
+                        id="email"  
+                        name="email"  
+                        required  
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> 
+                </div> 
+         
+                <div class="form-group"> 
+                    <label for="tel">เบอร์โทรศัพท์</label> 
+                    <input  
+                        type="tel"  
+                        id="tel"  
+                        name="tel" 
+                        pattern="[0-9]{10}"> 
+                </div> 
+         
+                <div class="form-group"> 
+                    <label for="message">ข้อความ *</label> 
+                    <textarea  
+                        id="message"  
+                        name="message"  
+                        required  
+                        minlength="10" 
+                        rows="5"></textarea> 
+                </div> 
+         
+                <button type="submit">ส่งข้อความ</button> 
+            </form> 
+        </section> 
+        <br>
+        <div class="gallery-item nature">
+            <img src="https://th.bing.com/th/id/R.bc9513d6e3e9a4735f25839b6bb61fc9?rik=6X5dFXUQpsUmgg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ddgHg5iYtPI%2fUjL4iUwyK8I%2fAAAAAAAAANo%2fN6fQrWaX_tU%2fs640%2fao4ac373rx.jpg&ehk=fwmiO1zZ%2bbRXMBJGGR1KaKtYeSXgjXmk7NyxjaNL4XE%3d&risl=&pid=ImgRaw&r=0
+    " alt="รูปสวยงาม">    
+                <h1></h1>
+                <p1></p1>
+        </div>
+        <!-- เพิ่มรูปภาพอื่นๆ ในลักษณะเดียวกัน -->
+    </main> 
+ 
+    <footer role="contentinfo"> 
+        <p>&copy; 2024 เว็บเทคโนโลยี. สงวนลิขสิทธิ์.</p> 
+    </footer> 
+</body> 
+</html> 
