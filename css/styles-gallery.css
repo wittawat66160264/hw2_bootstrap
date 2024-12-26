@@ -13,8 +13,7 @@ body {
 /* แก้ไขส่วน Navbar */
 header {
     text-align: center;
-    padding: 2rem;
-    background: linear-gradient(to right, #2193b0, #6dd5ed); /* สีไล่เฉด */
+    background: white; /* สีไล่เฉด */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
