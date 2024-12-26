@@ -124,3 +124,23 @@ body {
         padding: 0.5rem 1rem;
     }
 }
+.card {
+    margin-bottom: 1.5rem; /* เพิ่มระยะห่างระหว่างการ์ด */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* ปรับขนาดรูปภาพให้เหมาะสม */
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
